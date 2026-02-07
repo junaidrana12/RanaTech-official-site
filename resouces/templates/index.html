@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RanaTech-Home</title>
+
+<!--    &lt;!&ndash; Google Fonts &ndash;&gt;-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .apple{
+        color: gray;
+        }
+
+        .rr{
+        text-align: center;
+        }
+
+        header {
+            background: linear-gradient(to right, #0066cc, #003366);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+<!--            background-color: rgb(34,67,89,32);-->
+        }
+
+        .logo-title img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+            background-color: black;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #003366;
+        }
+
+        .content {
+            text-align: center;
+            margin: 60px 20px;
+        }
+
+        .content h2 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #0066cc;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #004999;
+        }
+
+        .responsive-iframe-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+
+
+
+        .icons {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .icons i {
+            margin: 0 10px;
+            color: #0066cc;
+            transition: color 0.3s;
+        }
+
+        .icons i:hover {
+            color: #003366;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            background-color: #003366;
+            border-top: 1px solid #ddd;
+        }
+
+
+
+
+.hero-content h1 {
+  font-size: 40px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.btn {
+  background: #ffcc00;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+        .hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 40%;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
+}
+
+.image-text {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+        .hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 60px 10%;
+  min-height: 30vh;
+  background-color: rgb(40,67,89,32);
+  color: white;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+/* Profile photo */
+.hero-image .profile {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: transparent;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
+}
+
+/* Logo + text */
+.founder-info {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.founder-info .logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+        .hero {
+  position: relative;
+}
+
+/* Corner logo */
+.corner-logo {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  z-index: 10;
+}
+
+.corner-logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-title">
+<!--        <img src="ranatech-logo.png" alt="RanaTech">-->
+        <div class="title-text">
+            <h1>Welcome to RanaTech</h1>
+            <p class="rr">Your tech partner for smart solutions</p>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <a th:href="@{/}">Home</a>
+    <a th:href="@{/about}">About</a>
+    <a th:href="@{/services}">Services</a>
+    <a th:href="@{/portfolio}">Portfolio</a>
+    <a th:href="@{/contact}">Contact</a>
+</nav>
+
+
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Prepare Today. Build Tomorrow</h1>
+        <p class="apple">Full Stack Developer | Java | Spring Boot</p>
+<!--        <a href="#Contact Us" class="btn">Explore More</a>-->
+        <button class="btn" th:onclick="'location.href=\'/about\''">
+            <i class="fas fa-phone-alt"></i> Explore More</button>
+    </div>
+
+    <div class="hero-image">
+        <img src="/images/Rana.png" alt="My Photo">
+<!--        <img src="/images/RanaTech-Logo.png" alt="RanaTech-Logo" class="logo">-->
+
+        <p class="image-text">Founder & Developer – RanaTech</p>
+    </div>
+
+    <div class="corner-logo">
+        <img src="/images/RanaTech-Logo.png" alt="RanaTech Logo">
+    </div>
+
+</section>
+
+
+
+
+<div class="content">
+    <h2>We Build Smart Software for Modern Businesses</h2>
+    <p>From custom web development to digital solutions, we transform your ideas into reality.</p>
+    <br>
+    <button class="btn-primary" th:onclick="'location.href=\'/contact\''">
+        <i class="fas fa-phone-alt"></i> Contact Us </button>
+</div>
+
+<div class="icons">
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-linkedin"></i>
+    <i class="fab fa-github-square"></i>
+</div>
+
+<footer>
+    © 2026 RanaTech | Designed with ❤️ by RanaTech Team
+</footer>
+
+</body>
+</html>

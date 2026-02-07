@@ -1,0 +1,149 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>About Us - RanaTech</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>About RanaTech</h1>-->
+<!--<p>We are a team of passionate tech professionals.</p>-->
+
+<!--   <pre>-->
+<!--    RanaTech is a technology-focused company committed to delivering smart, scalable,-->
+<!--       and innovative software solutions for businesses of all sizes. Founded with the-->
+<!--       vision of empowering digital transformation, we specialize in custom software-->
+<!--       development, web applications, and enterprise tech solutions.-->
+
+<!--    At RanaTech, we believe in building technology that drives progress. Whether you're a startup looking-->
+<!--       for an MVP,or an established enterprise seeking performance-driven platforms, our team combines-->
+<!--       deep technical expertise with a passion for solving real-world problems.-->
+
+<!--    🔧 What We Do:-->
+<!--    ▪️Web & App Development (Java, Spring Boot, Thymeleaf)-->
+
+<!--    ▪️Custom APIs & Backend Services-->
+
+<!--    ▪️Database Design & Optimization (MySQL)-->
+
+<!--    ▪️Cloud Integration & Deployment-->
+
+<!--   ▪️ Technical Consulting & Code Reviews-->
+
+<!--       <h3>💡 Our Mission:</h3>-->
+<!--    To create reliable, efficient, and user-centric technology that helps businesses-->
+<!--       innovate, grow, and succeed.-->
+
+<!--       🧑<h3>‍💻 Our Team:</h3>-->
+<!--    RanaTech is led by a team of passionate developers and problem solvers. We value collaboration,-->
+<!--       clean code, and continuous learning to stay ahead in the ever-evolving tech landscape.-->
+<!--</pre>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - RanaTech</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" /> <!-- Optional external CSS -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #b30000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .about-container {
+            max-width: 900px;
+            background: white;
+            padding: 30px;
+            margin: 30px auto;
+            border-left: 5px solid #b30000;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h3 {
+            color: #b30000;
+            margin-top: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>About RanaTech</h1>
+<p>We are a team of passionate tech professionals.</p>
+
+<div class="about-container">
+    <div class="section">
+        <p>
+            RanaTech is a technology-focused company committed to delivering smart, scalable, and innovative software
+            solutions for businesses of all sizes. Founded with the vision of empowering digital transformation, we
+            specialize in custom software development, web applications, and enterprise tech solutions.
+        </p>
+        <p>
+            At RanaTech, we believe in building technology that drives progress. Whether you're a startup looking
+            for an MVP or an established enterprise seeking performance-driven platforms, our team combines
+            deep technical expertise with a passion for solving real-world problems.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>🔧 What We Do:</h3>
+        <ul>
+            <li>Web & App Development (Java, Spring Boot, Thymeleaf)</li>
+            <li>Custom APIs & Backend Services</li>
+            <li>Database Design & Optimization (MySQL)</li>
+            <li>Cloud Integration & Deployment</li>
+            <li>Technical Consulting & Code Reviews</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>💡 Our Mission:</h3>
+        <p>
+            To create reliable, efficient, and user-centric technology that helps businesses innovate, grow, and succeed.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>🧑‍💻 Our Team:</h3>
+        <p>
+            RanaTech is led by a team of passionate developers and problem solvers. We value collaboration,
+            clean code, and continuous learning to stay ahead in the ever-evolving tech landscape.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

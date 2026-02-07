@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Services - RanaTech</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #b30000;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Our Services</h2>
+
+    <div class="card-grid">
+        <div class="card">
+            <h3>1. Web Development</h3>
+            <p>We create custom websites using Java, Spring Boot, and Thymeleaf. Our websites are fast, secure, and mobile-friendly.</p>
+        </div>
+
+        <div class="card">
+            <h3>2. Mobile App Development</h3>
+            <p>We build Android and iOS apps tailored to your business needs, with smooth performance and modern UI.</p>
+        </div>
+
+        <div class="card">
+            <h3>3. UI/UX Design</h3>
+            <p>Our team designs clean, responsive, and user-friendly interfaces that enhance the user experience.</p>
+        </div>
+
+        <div class="card">
+            <h3>4. Digital Marketing</h3>
+            <p>We offer SEO, social media marketing, and content strategy services to help your business grow online.</p>
+        </div>
+
+        <div class="card">
+            <h3>5. Custom Software Solutions</h3>
+            <p>We develop scalable software for startups, small businesses, and enterprises with full support and maintenance.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - RanaTech</title>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f2f5f9;
+
+    }
+
+    #contact {
+        background-color: #fffff;
+        padding: 40px;
+        border-radius: 15px;
+        max-width: 700px;
+        margin: 60px auto;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    #contact h2 {
+        text-align: center;
+        color: #b30000;
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+
+    #contact p {
+        text-align: center;
+        color: #444;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+
+    .contact-details {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    .contact-details p {
+        margin: 8px 0;
+        font-weight: 500;
+        color: #333;
+    }
+
+    form label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+        color: #333;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        resize: vertical;
+        transition: border-color 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        border-color: #b30000;
+        outline: none;
+    }
+
+    button {
+        background-color: #b30000;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #8e0000;
+    }
+
+    @media (max-width: 600px) {
+        #contact {
+            padding: 25px;
+        }
+
+        button {
+            padding: 10px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>If you have any questions, project inquiries, or partnership opportunities, feel free to reach out to us!</p>
+
+  <div class="contact-details">
+    <p><strong>Email:</strong> admin@ranatech.com</p>
+    <p><strong>Phone:</strong> +91-96278-00584</p>
+    <p><strong>Address:</strong> RanaTech, Meerut, India</p>
+  </div>
+
+  <form th:action="@{/contact}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+</body>
+</html>
